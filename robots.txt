@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point to the sitemap that GitHub Pages automatically generates
+Sitemap: https://muhammadshahidusman.github.io/sitemap.xml
