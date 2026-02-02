@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Shahid Usman - Geospatial Data Analyst</title>
+
+    <!-- SEO -->
+    <title>Muhammad Shahid Usman | Geospatial Data Scientist & GeoAI Specialist</title>
+    <meta name="description" content="Portfolio of Muhammad Shahid Usman, Geospatial Data Scientist & Analyst specializing in GeoAI, hydrological modelling, Python automation, and remote sensing for urban planning and climate resilience.">
+    <meta name="keywords" content="Muhammad Shahid Usman, Geospatial Data Scientist, GeoAI, Remote Sensing, GIS, Machine Learning, Lahore, Pakistan">
+
+    <!-- Social Preview -->
+    <meta property="og:title" content="Muhammad Shahid Usman | Geospatial Data Scientist & GeoAI Specialist">
+    <meta property="og:description" content="Remote sensing, GeoAI, and hydrological modelling for climate resilience, urban planning, and disaster management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muhammadshahidusman.github.io">
+    <meta property="og:image" content="https://muhammadshahidusman.github.io/UsmanProfile.png">
+
     <style>
         * {
             margin: 0;
@@ -15,7 +27,7 @@
             --primary-color: #2563eb;
             --secondary-color: #1e40af;
             --accent-color: #3b82f6;
-            --text-dark: #1f2937;
+            --text-dark: #0f172a;
             --text-light: #6b7280;
             --bg-light: #f9fafb;
             --bg-white: #ffffff;
@@ -27,49 +39,88 @@
             line-height: 1.6;
             color: var(--text-dark);
             overflow-x: hidden;
+            background: #020617;
         }
 
         /* Navigation */
         nav {
             position: fixed;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 2px 18px rgba(0,0,0,0.4);
             z-index: 1000;
-            padding: 1rem 0;
+            padding: 0.75rem 0;
         }
 
         nav .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         nav .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
+            color: #e5e7eb;
+            letter-spacing: 0.04em;
+        }
+
+        nav .logo span {
             color: var(--primary-color);
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: #e5e7eb;
             font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            position: relative;
+            padding-bottom: 0.2rem;
             transition: color 0.3s;
         }
 
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, #f97316, #facc15);
+            transition: width 0.3s;
+        }
+
         nav a:hover {
-            color: var(--primary-color);
+            color: #f9fafb;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile nav */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            width: 22px;
+            height: 2px;
+            background: #e5e7eb;
         }
 
         /* Hero Section */
@@ -77,68 +128,123 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 6rem 2rem 4rem;
+            background: radial-gradient(circle at top left, #1d4ed8 0, #020617 55%);
+            padding: 6rem 1.5rem 4rem;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
+        /* Animated particle overlay */
+        .hero::before,
+        .hero::after {
             content: '';
             position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: moveBackground 20s linear infinite;
+            border-radius: 999px;
+            filter: blur(60px);
+            opacity: 0.5;
+            pointer-events: none;
         }
 
-        @keyframes moveBackground {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+        .hero::before {
+            width: 420px;
+            height: 420px;
+            background: #22d3ee;
+            top: -120px;
+            right: -80px;
+            animation: float1 16s ease-in-out infinite;
+        }
+
+        .hero::after {
+            width: 380px;
+            height: 380px;
+            background: #a855f7;
+            bottom: -140px;
+            left: -90px;
+            animation: float2 18s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+            0%,100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(40px) translateX(-30px); }
+        }
+
+        @keyframes float2 {
+            0%,100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-35px) translateX(40px); }
         }
 
         .hero .container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            gap: 3rem;
             align-items: center;
             position: relative;
             z-index: 1;
         }
 
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
         .hero-content h1 {
-            font-size: 3.5rem;
-            color: white;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: #e5e7eb;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
 
         .hero-content h1 span {
-            background: linear-gradient(to right, #fbbf24, #f59e0b);
+            background: linear-gradient(to right, #f97316, #facc15);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
+        .hero-subtitle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.75);
+            color: #cbd5f5;
+            font-size: 0.8rem;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle span {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 12px #22c55e;
+        }
+
         .hero-content p {
-            font-size: 1.25rem;
-            color: rgba(255,255,255,0.9);
+            font-size: 1.05rem;
+            color: #cbd5f5;
             margin-bottom: 2rem;
+            max-width: 34rem;
         }
 
-        .hero-image {
-            position: relative;
+        .keywords {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
-        .hero-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            border: 5px solid rgba(255,255,255,0.2);
+        .keywords span {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            color: #e5e7eb;
+            background: rgba(15, 23, 42, 0.7);
         }
 
         .cta-buttons {
@@ -149,37 +255,92 @@
 
         .btn {
             padding: 0.875rem 2rem;
-            border-radius: 50px;
+            border-radius: 999px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
+            transition: all 0.25s ease-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
-            background: white;
-            color: var(--primary-color);
+            background: linear-gradient(to right, #3b82f6, #22c55e);
+            color: #0b1120;
+            box-shadow: 0 14px 35px rgba(37, 99, 235, 0.45);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 18px 45px rgba(37, 99, 235, 0.6);
         }
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: #e5e7eb;
+            border: 1px solid rgba(148, 163, 184, 0.7);
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: var(--primary-color);
+            background: rgba(15, 23, 42, 0.7);
+            transform: translateY(-2px);
         }
 
-        /* Section Styling */
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            inset: -18px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, #38bdf8, #a855f7, #f97316);
+            opacity: 0.85;
+            filter: blur(6px);
+        }
+
+        .hero-image-inner {
+            position: relative;
+            border-radius: 26px;
+            padding: 6px;
+            background: radial-gradient(circle at top, rgba(148, 163, 184, 0.25), rgba(15, 23, 42, 1));
+            box-shadow:
+                0 18px 45px rgba(15, 23, 42, 0.9),
+                0 0 0 1px rgba(148, 163, 184, 0.4);
+            animation: floatCard 8s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            display: block;
+            width: min(360px, 80vw);
+            border-radius: 20px;
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Global sections */
         section {
-            padding: 5rem 2rem;
+            padding: 5rem 1.5rem;
+        }
+
+        .section-light {
+            background: #f8fafc;
+        }
+
+        .section-dark {
+            background: #020617;
         }
 
         .container {
@@ -193,84 +354,114 @@
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            color: #e5e7eb;
+            margin-bottom: 0.6rem;
+        }
+
+        .section-title p {
+            color: #9ca3af;
+            font-size: 0.95rem;
         }
 
         .section-title .underline {
             width: 80px;
             height: 4px;
-            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-            margin: 0 auto;
+            background: linear-gradient(to right, #3b82f6, #22c55e);
+            margin: 0.8rem auto 0;
+            border-radius: 999px;
         }
 
-        /* About Section */
+        .section-light .section-title h2 {
+            color: #0f172a;
+        }
+
+        .section-light .section-title p {
+            color: #6b7280;
+        }
+
+        /* About */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.8fr);
+            gap: 2.5rem;
             align-items: start;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.25rem;
         }
 
         .stat-card {
-            background: var(--bg-light);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
+            background: radial-gradient(circle at top, #1d4ed8, #020617);
+            padding: 1.4rem;
+            border-radius: 16px;
+            text-align: left;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            color: #e5e7eb;
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
         }
 
         .stat-card h3 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            font-size: 1.9rem;
+            color: #facc15;
+            margin-bottom: 0.35rem;
         }
 
         .stat-card p {
-            color: var(--text-light);
+            color: #cbd5f5;
             font-size: 0.9rem;
         }
 
         .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #d1d5db;
         }
 
         .about-text p {
             margin-bottom: 1rem;
         }
 
-        /* Skills Section */
+        .about-highlight {
+            margin-top: 0.75rem;
+            padding: 0.9rem 1rem;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(55, 65, 81, 0.9);
+            color: #e5e7eb;
+            font-size: 0.95rem;
+        }
+
+        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.7rem;
         }
 
         .skill-category {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.28), rgba(15, 23, 42, 1));
+            padding: 1.8rem;
+            border-radius: 18px;
+            box-shadow: 0 10px 32px rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            transform-origin: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
         .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 45px rgba(15, 23, 42, 1);
+            border-color: #3b82f6;
         }
 
         .skill-category h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            color: #e5e7eb;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
         }
 
         .skill-category ul {
@@ -278,16 +469,17 @@
         }
 
         .skill-category li {
-            padding: 0.5rem 0;
-            color: var(--text-light);
-            border-bottom: 1px solid var(--border-color);
+            padding: 0.4rem 0;
+            color: #cbd5f5;
+            font-size: 0.92rem;
+            border-bottom: 1px dashed rgba(55, 65, 81, 0.8);
         }
 
         .skill-category li:last-child {
             border-bottom: none;
         }
 
-        /* Experience Section */
+        /* Experience */
         .experience-timeline {
             position: relative;
             padding-left: 3rem;
@@ -296,172 +488,184 @@
         .experience-timeline::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 0.6rem;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #22c55e);
+            opacity: 0.7;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 3rem;
-            padding-left: 2rem;
+            margin-bottom: 2.5rem;
+            padding-left: 1.8rem;
+            animation: fadeInUp 0.8s ease-out both;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -3.6rem;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            border: 4px solid white;
-            box-shadow: 0 0 0 3px var(--bg-light);
+            left: -0.2rem;
+            top: 0.15rem;
+            width: 13px;
+            height: 13px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.25);
         }
 
         .timeline-item h3 {
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: #e5e7eb;
+            margin-bottom: 0.3rem;
         }
 
         .timeline-item .company {
-            color: var(--primary-color);
+            color: #60a5fa;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .timeline-item .duration {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
         }
 
         .timeline-item ul {
             list-style: none;
-            padding-left: 0;
         }
 
         .timeline-item li {
-            padding: 0.5rem 0;
-            color: var(--text-light);
-            padding-left: 1.5rem;
+            padding: 0.35rem 0;
+            color: #d1d5db;
+            padding-left: 1.2rem;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .timeline-item li::before {
             content: '▹';
             position: absolute;
             left: 0;
-            color: var(--primary-color);
+            color: #3b82f6;
         }
 
-        /* Projects Section */
-        #projects {
-            background: var(--bg-light);
+        /* Projects */
+        #projects.section-light {
+            background: #020617;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.7rem;
         }
 
         .project-card {
-            background: white;
-            border-radius: 15px;
+            background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.26), rgba(15, 23, 42, 1));
+            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            box-shadow: 0 12px 38px rgba(15, 23, 42, 1);
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            transform: translateY(0);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 18px 55px rgba(15, 23, 42, 1);
+            border-color: #22c55e;
         }
 
         .project-card .project-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            padding: 2rem;
-            color: white;
+            padding: 1.5rem 1.6rem 1rem;
         }
 
         .project-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+            color: #e5e7eb;
         }
 
         .project-card .client {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            font-size: 0.82rem;
+            color: #9ca3af;
         }
 
         .project-card .project-body {
-            padding: 1.5rem;
+            padding: 0 1.6rem 1.5rem;
         }
 
         .project-card p {
-            color: var(--text-light);
-            line-height: 1.6;
+            color: #d1d5db;
+            line-height: 1.7;
+            font-size: 0.94rem;
         }
 
-        /* Publications Section */
+        /* Publications */
         .publications-list {
             max-width: 900px;
             margin: 0 auto;
         }
 
         .publication-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--primary-color);
+            background: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), rgba(15, 23, 42, 1));
+            padding: 1.7rem 1.8rem;
+            border-radius: 16px;
+            margin-bottom: 1.4rem;
+            box-shadow: 0 12px 36px rgba(15, 23, 42, 1);
+            border-left: 4px solid #3b82f6;
         }
 
         .publication-item h3 {
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            color: #e5e7eb;
+            margin-bottom: 0.4rem;
+            font-size: 1.05rem;
         }
 
         .publication-item .authors {
-            color: var(--text-light);
+            color: #9ca3af;
             font-style: italic;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
+            font-size: 0.9rem;
         }
 
         .publication-item .journal {
-            color: var(--primary-color);
+            color: #facc15;
             font-weight: 600;
+            font-size: 0.9rem;
         }
 
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+        /* Contact */
+        #contact.section-dark {
+            background: radial-gradient(circle at top, #1d4ed8, #020617);
         }
 
         .contact-content {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            color: #e5e7eb;
         }
 
         .contact-content h2 {
-            color: white;
-            margin-bottom: 1rem;
+            color: #e5e7eb;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-content p {
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            color: #cbd5f5;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
+            gap: 2.5rem;
+            margin-top: 1.3rem;
             flex-wrap: wrap;
         }
 
@@ -469,79 +673,131 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-width: 160px;
         }
 
-        .contact-item a {
-            color: white;
+        .contact-item strong {
+            margin-bottom: 0.15rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #9ca3af;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: #e5e7eb;
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: opacity 0.3s;
+            font-size: 0.98rem;
         }
 
         .contact-item a:hover {
-            opacity: 0.8;
+            color: #bfdbfe;
         }
 
         .social-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.2rem;
             justify-content: center;
             margin-top: 2rem;
         }
 
         .social-links a {
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.2);
+            width: 46px;
+            height: 46px;
+            background: rgba(15, 23, 42, 0.8);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s;
+            color: #e5e7eb;
+            font-size: 1.2rem;
+            border: 1px solid rgba(148, 163, 184, 0.8);
+            transition: all 0.25s;
         }
 
         .social-links a:hover {
-            background: white;
-            color: var(--primary-color);
+            background: #e5e7eb;
+            color: #0f172a;
             transform: translateY(-3px);
         }
 
         /* Footer */
         footer {
-            background: var(--text-dark);
-            color: white;
+            background: #020617;
+            color: #9ca3af;
             text-align: center;
-            padding: 2rem;
+            padding: 1.7rem;
+            font-size: 0.85rem;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        /* Scroll animation helper */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
             .hero .container {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
             .hero-image {
                 order: -1;
+            }
+            .hero-content p,
+            .about-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .keywords {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav .container {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 56px;
+                right: 1rem;
+                flex-direction: column;
+                background: rgba(15, 23, 42, 0.98);
+                padding: 0.75rem 1rem;
+                border-radius: 12px;
+                border: 1px solid rgba(51, 65, 85, 0.9);
+                display: none;
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            section {
+                padding: 4rem 1.25rem;
             }
 
             .about-content {
                 grid-template-columns: 1fr;
             }
 
-            nav ul {
-                gap: 1rem;
-            }
-
             .experience-timeline {
-                padding-left: 2rem;
+                padding-left: 1.5rem;
             }
 
             .projects-grid {
@@ -549,9 +805,17 @@
             }
         }
 
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 5.5rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -559,8 +823,11 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">Shahid Usman</div>
-            <ul>
+            <div class="logo">Shahid <span>Usman</span></div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -571,67 +838,101 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-subtitle">
+                    <span></span>
+                    GEOAI • REMOTE SENSING • ML
+                </div>
                 <h1>Muhammad <span>Shahid Usman</span></h1>
-                <p>Geospatial Data Scientist & Analyst specializing in GeoAI, Python Automation, and Remote Sensing</p>
+                <p>
+                    Geospatial Data Scientist & Analyst leveraging GeoAI, machine learning, and remote sensing
+                    to build decision‑ready insights for urban planning, climate resilience, and water resources.
+                </p>
+                <div class="keywords">
+                    <span>GeoAI & Spatial ML</span>
+                    <span>Hydrological Modelling</span>
+                    <span>Urban Analytics</span>
+                    <span>Python Automation</span>
+                    <span>SDSS & Web GIS</span>
+                </div>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">Get In Touch</a>
                     <a href="#projects" class="btn btn-secondary">View Projects</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="UsmanProfile.png" alt="Muhammad Shahid Usman">
+                <div class="hero-image-inner">
+                    <img src="UsmanProfile.png" alt="Muhammad Shahid Usman">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- About -->
+    <section id="about" class="section-dark">
         <div class="container">
             <div class="section-title">
                 <h2>About Me</h2>
+                <p>Remote sensing, GeoAI, and hydrological modelling for data‑driven urban and environmental decisions.</p>
                 <div class="underline"></div>
             </div>
             <div class="about-content">
-                <div class="stats-grid">
+                <div class="stats-grid reveal">
                     <div class="stat-card">
                         <h3>2+</h3>
-                        <p>Years Experience</p>
+                        <p>Years delivering geospatial analytics for government and development projects.</p>
                     </div>
                     <div class="stat-card">
                         <h3>20+</h3>
-                        <p>Web Maps Built</p>
+                        <p>Interactive web maps deployed using GeoServer, Leaflet, and PostGIS.</p>
                     </div>
                     <div class="stat-card">
                         <h3>10+</h3>
-                        <p>Active Projects</p>
+                        <p>Large‑scale GIS projects managed with clean, reproducible data workflows.</p>
                     </div>
                     <div class="stat-card">
                         <h3>30%</h3>
-                        <p>Time Saved</p>
+                        <p>Average reduction in processing time using Python automation pipelines.</p>
                     </div>
                 </div>
-                <div class="about-text">
-                    <p>I am a Geospatial Data Scientist and Analyst with more than two years of experience, focusing on GeoAI, Python automation, and Hydrological modeling. My skills involve transforming complex spatial datasets into practical solutions for urban planning, climate resilience, and disaster management.</p>
-                    <p>Currently pursuing a Master's in Data Science at Riphah International University to deepen my knowledge of advanced machine learning methods and remote sensing workflows. I hold a Bachelor's degree in Remote Sensing and GIS from the University of Gujrat.</p>
-                    <p>My work has contributed to significant projects for organizations like the Asian Development Bank (ADB) and Aga Khan Agency for Habitat, focusing on urban development, spatial decision support systems, and environmental monitoring.</p>
+                <div class="about-text reveal">
+                    <p>
+                        I am a Geospatial Data Scientist and Analyst with more than two years of experience,
+                        focusing on GeoAI, Python automation, and hydrological modelling. I transform complex
+                        spatial datasets into decision‑ready intelligence for urban planning, climate resilience,
+                        and disaster management.
+                    </p>
+                    <p>
+                        I am currently pursuing a Master's in Data Science at Riphah International University,
+                        deepening my expertise in advanced machine learning and remote sensing workflows.
+                        I also hold a Bachelor's in Remote Sensing and GIS from the University of Gujrat.
+                    </p>
+                    <p>
+                        My work spans SDSS development, remote sensing‑based monitoring, and spatial analytics
+                        for organizations including the Asian Development Bank and Aga Khan Agency for Habitat.
+                    </p>
+                    <div class="about-highlight">
+                        I enjoy building end‑to‑end GeoAI solutions – from satellite data ingestion and
+                        feature engineering to model deployment and interactive dashboards for non‑technical users.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- Skills -->
+    <section id="skills" class="section-dark">
         <div class="container">
             <div class="section-title">
                 <h2>Technical Skills</h2>
+                <p>Full‑stack geospatial capability across desktop GIS, cloud remote sensing, and web delivery.</p>
                 <div class="underline"></div>
             </div>
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <h3>GIS Platforms</h3>
                     <ul>
                         <li>ArcGIS Pro & ArcMap</li>
@@ -640,183 +941,185 @@
                         <li>AutoCAD</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Remote Sensing</h3>
+                <div class="skill-category reveal">
+                    <h3>Remote Sensing & GeoAI</h3>
                     <ul>
-                        <li>Sentinel-1 (SAR) & Sentinel-2</li>
-                        <li>Landsat</li>
+                        <li>Sentinel‑1 (SAR) & Sentinel‑2, Landsat</li>
                         <li>Google Earth Engine (GEE)</li>
-                        <li>Spectral Indices (NDWI, NDVI)</li>
+                        <li>Spectral Indices (NDVI, NDWI)</li>
                         <li>Change & Anomaly Detection</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Web GIS</h3>
+                <div class="skill-category reveal">
+                    <h3>Web GIS & APIs</h3>
                     <ul>
-                        <li>GeoDjango</li>
+                        <li>GeoDjango & Django REST</li>
                         <li>Leaflet & Mapbox</li>
                         <li>Google Maps API</li>
-                        <li>OpenStreetMap</li>
+                        <li>OpenStreetMap integration</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <h3>Data Visualization</h3>
                     <ul>
                         <li>ArcGIS Dashboards</li>
-                        <li>Power BI</li>
-                        <li>Tableau</li>
+                        <li>Power BI & Tableau</li>
                         <li>Interactive Web Maps</li>
+                        <li>Story maps for stakeholders</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <h3>Databases</h3>
                     <ul>
                         <li>PostgreSQL/PostGIS</li>
-                        <li>SQL Server (Spatial)</li>
-                        <li>Spatial Data Management</li>
+                        <li>SQL Server (spatial)</li>
+                        <li>Spatial data modelling</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <h3>Programming</h3>
                     <ul>
-                        <li>Python (Automation)</li>
+                        <li>Python (automation & ML)</li>
                         <li>JavaScript</li>
                         <li>SQL</li>
-                        <li>R (Statistical Analysis)</li>
+                        <li>R (stats & visualization)</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
+    <!-- Experience -->
+    <section id="experience" class="section-dark">
         <div class="container">
             <div class="section-title">
                 <h2>Work Experience</h2>
+                <p>Delivering operational geospatial solutions from prototype to production.</p>
                 <div class="underline"></div>
             </div>
             <div class="experience-timeline">
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <h3>Geospatial Data Analyst</h3>
                     <div class="company">Sheher Saaz Pvt Ltd</div>
                     <div class="duration">August 2024 – Present</div>
                     <ul>
-                        <li>Designed and deployed a Spatial Decision Support System (SDSS) for the PICIIP project in Sahiwal and Sialkot cities</li>
-                        <li>Developed Python automation scripts that reduced data processing time by 30%, saving approximately 12 hours weekly</li>
-                        <li>Built 20+ interactive web maps using GeoServer, Leaflet, and PostGIS for urban and environmental projects</li>
-                        <li>Managed large-scale GIS datasets for over 10 active projects, ensuring data consistency and reliability</li>
+                        <li>Designed and deployed a Spatial Decision Support System (SDSS) for the PICIIP project in Sahiwal and Sialkot.</li>
+                        <li>Built Python automation pipelines that reduced data processing time by 30%, saving ~12 hours per week.</li>
+                        <li>Developed 20+ interactive web maps with GeoServer, Leaflet, and PostGIS for urban and environmental projects.</li>
+                        <li>Managed large‑scale GIS datasets across 10+ active projects with strict data quality controls.</li>
                     </ul>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <h3>GIS & Remote Sensing Assistant</h3>
                     <div class="company">Punjab Police</div>
                     <div class="duration">September 2023 – October 2023</div>
                     <ul>
-                        <li>Integrated GIS and remote sensing technologies to enhance operational efficiency in law enforcement</li>
-                        <li>Performed spatial hotspot analysis to identify irregular patterns, utilizing detection workflows parallel to environmental surveillance monitoring</li>
+                        <li>Integrated GIS and remote sensing technologies to enhance operational efficiency in law enforcement.</li>
+                        <li>Performed spatial hotspot analysis using workflows parallel to environmental surveillance monitoring.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <!-- Projects -->
+    <section id="projects" class="section-dark">
         <div class="container">
             <div class="section-title">
                 <h2>Featured Projects</h2>
+                <p>Selected work in SDSS, master planning, and environmental monitoring.</p>
                 <div class="underline"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-header">
                         <h3>Decision Support System (DSS)</h3>
-                        <p class="client">Punjab Intermediate Cities Improvement Investment Program (PICIIP) - ADB</p>
+                        <p class="client">PICIIP – Asian Development Bank</p>
                     </div>
                     <div class="project-body">
-                        <p>Developed comprehensive spatial decision support systems for Sahiwal and Sialkot cities, integrating multiple data layers for urban planning and infrastructure development.</p>
+                        <p>Developed spatial decision support systems for Sahiwal and Sialkot, integrating multi‑source data and analytics for infrastructure planning and service delivery.</p>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-header">
                         <h3>GIS Mapping for Divisional Master Plans</h3>
-                        <p class="client">Hazara & Malakand Division - ADB</p>
+                        <p class="client">Hazara & Malakand Divisions – ADB</p>
                     </div>
                     <div class="project-body">
-                        <p>Created detailed GIS-based master plans for multiple divisions in Khyber Pakhtunkhwa, focusing on land use planning and urban development strategies.</p>
+                        <p>Delivered master‑plan ready data, land‑use maps, and analytical layers to support urban growth strategies in multiple secondary cities.</p>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-header">
                         <h3>District Land Use Plans for KPK</h3>
                         <p class="client">Provincial Land Use Plan, P&D Department</p>
                     </div>
                     <div class="project-body">
-                        <p>Conducted comprehensive GIS-based mapping and analysis for district-level land use planning across Khyber Pakhtunkhwa province.</p>
+                        <p>Executed GIS‑based land‑use assessment and zoning support across districts, aligning spatial policy with on‑ground development patterns.</p>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-header">
-                        <h3>Master Plans for Chilas and Astore Cities</h3>
-                        <p class="client">Executive Engineer, B&R Division, GB PWD Diamer</p>
+                        <h3>Master Plans for Chilas & Astore</h3>
+                        <p class="client">GB PWD – Diamer</p>
                     </div>
                     <div class="project-body">
-                        <p>Provided consultancy services for the preparation of comprehensive master plans for urban centers in Gilgit-Baltistan.</p>
+                        <p>Provided spatial evidence and mapping for resilient master plans in high‑mountain urban centres facing climate and access constraints.</p>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-header">
-                        <h3>Spatial Design Assessment for Gilgit-Baltistan</h3>
-                        <p class="client">Aga Khan Agency for Habitat, Pakistan (AKAH-P)</p>
+                        <h3>Spatial Design Assessment – Gilgit‑Baltistan</h3>
+                        <p class="client">Aga Khan Agency for Habitat (AKAH‑P)</p>
                     </div>
                     <div class="project-body">
-                        <p>Conducted master planning along with spatial design assessment focusing on sustainable urban development in mountainous regions.</p>
+                        <p>Supported spatial design assessments with hazard mapping and exposure analysis in mountainous settlements.</p>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-header">
-                        <h3>Master Plans for Urban Centers of KPK</h3>
-                        <p class="client">Urban Policy Unit, Government of Khyber Pakhtunkhwa</p>
+                        <h3>Urban Centers of Khyber Pakhtunkhwa</h3>
+                        <p class="client">Urban Policy Unit, Government of KPK</p>
                     </div>
                     <div class="project-body">
-                        <p>Developed comprehensive master plans for multiple urban centers, integrating GIS technology with urban planning principles.</p>
+                        <p>Developed GIS‑enabled master planning inputs and visualizations for multiple urban centers across the province.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications">
+    <!-- Publications -->
+    <section id="publications" class="section-dark">
         <div class="container">
             <div class="section-title">
                 <h2>Publications</h2>
+                <p>Applied research in cryosphere change and groundwater resources.</p>
                 <div class="underline"></div>
             </div>
             <div class="publications-list">
-                <div class="publication-item">
+                <div class="publication-item reveal">
                     <h3>Impact of Glacier Mass Balance on Socioeconomic Conditions of the Shigar Valley, Karakoram, Pakistan</h3>
                     <p class="authors">Usman, M.S., et al.</p>
                     <p class="journal">OEconomia, 2024</p>
-                    <p style="margin-top: 0.5rem; color: #6b7280;">Demonstrates capability in Time-Series Analysis of water/ice features</p>
+                    <p style="margin-top: 0.5rem; color: #cbd5f5;">Demonstrates time‑series analysis of glacier and water‑related indicators using remote sensing.</p>
                 </div>
-                <div class="publication-item">
+                <div class="publication-item reveal">
                     <h3>Delineation of Groundwater Potential Zones using GIS/Remote Sensing Techniques</h3>
                     <p class="authors">Usman, M.S., et al.</p>
                     <p class="journal">IGD Congress</p>
-                    <p style="margin-top: 0.5rem; color: #6b7280;">Demonstrates capability in Water Resource Monitoring</p>
+                    <p style="margin-top: 0.5rem; color: #cbd5f5;">Showcases GIS‑based multi‑criteria analysis for water resource monitoring and planning.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Contact -->
+    <section id="contact" class="section-dark">
         <div class="container">
-            <div class="contact-content">
+            <div class="contact-content reveal">
                 <h2>Let's Work Together</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">I'm always interested in hearing about new projects and opportunities.</p>
+                <p>Open to collaborations and roles in GeoAI, remote sensing, and geospatial data science for impact‑oriented projects.</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <strong>Email</strong>
@@ -843,5 +1146,32 @@
     <footer>
         <p>&copy; 2026 Muhammad Shahid Usman. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+
+        function handleReveal() {
+            const trigger = window.innerHeight * 0.85;
+
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < trigger) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleReveal);
+        window.addEventListener('load', handleReveal);
+    </script>
 </body>
 </html>
