@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Shahid Usman | Geospatial Data Scientist</title>
-  <meta name="description" content="Portfolio of Muhammad Shahid Usman: geospatial data scientist and GIS developer working on flood risk, urban heat, glacier change, poverty mapping and web GIS.">
+  <meta name="description" content="Portfolio of Muhammad Shahid Usman: geospatial data scientist and GIS developer working on flood risk, urban heat, glacier change, deep-learning land-cover classification, poverty mapping and web GIS.">
   <meta name="author" content="Muhammad Shahid Usman">
   <link rel="canonical" href="https://muhammadshahidusman.github.io/">
   <meta property="og:title" content="Muhammad Shahid Usman | Geospatial Data Scientist">
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -121,6 +121,37 @@
             <div class="links">
               <a class="btn btn-primary btn-sm" href="https://muhammadshahidusman.github.io/flash-flood-susceptibility-stacking/" target="_blank" rel="noopener">Live dashboard ↗</a>
               <a class="btn btn-ghost btn-sm" href="https://github.com/Muhammadshahidusman/flash-flood-susceptibility-stacking" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature-rev reveal">
+          <a class="feature-media" href="https://muhammadshahidusman.github.io/Eurosatproject/" target="_blank" rel="noopener">
+            <img src="assets/img/eurosat-lahore-map.webp" width="970" height="830" loading="lazy" alt="ResNet50 land-cover map of Lahore district on a 640 m tile grid, showing a residential core and road network surrounded by cropland">
+            <div class="map-legend" aria-hidden="true">
+              <strong>ResNet50</strong>
+              <span><i style="background:#9370DB"></i>Residential</span>
+              <span><i style="background:#404040"></i>Highway</span>
+              <span><i style="background:#B22222"></i>Industrial</span>
+              <span><i style="background:#FF8C00"></i>Perm. crop</span>
+              <span><i style="background:#F0E68C"></i>Annual crop</span>
+              <span><i style="background:#9ACD32"></i>Pasture</span>
+            </div>
+          </a>
+          <div class="feature-body">
+            <p class="tagline">Deep learning · Explainable AI · Lahore</p>
+            <h3>Land-Cover Classification with Deep Learning: EuroSAT to Lahore</h3>
+            <p>A custom CNN and an ImageNet-pretrained ResNet50 trained on 27,000 EuroSAT Sentinel-2 images, profiled for computational cost, explained with Grad-CAM and deployed across 4,289 tiles of Lahore district. The dashboard runs both models live in the browser.</p>
+            <ul class="metrics">
+              <li><strong>97.41%</strong><span>ResNet50 test accuracy</span></li>
+              <li><strong>+16.0 pts</strong><span>over the custom CNN (81.38%)</span></li>
+              <li><strong>25.7×</strong><span>compute cost (4.13 vs 0.16 GMACs)</span></li>
+            </ul>
+            <p class="note">Grad-CAM shows ResNet50 attending to road edges, river channels and building texture. On Lahore the two models agree on only 39% of tiles, a clear sign of domain shift from European training data.</p>
+            <ul class="tags"><li>PyTorch</li><li>ResNet50</li><li>Grad-CAM</li><li>ONNX Runtime Web</li><li>Earth Engine</li><li>Sentinel-2</li></ul>
+            <div class="links">
+              <a class="btn btn-primary btn-sm" href="https://muhammadshahidusman.github.io/Eurosatproject/" target="_blank" rel="noopener">Live dashboard ↗</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/Muhammadshahidusman/Eurosatproject" target="_blank" rel="noopener">Code</a>
             </div>
           </div>
         </article>
