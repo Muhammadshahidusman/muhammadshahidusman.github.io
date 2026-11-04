@@ -2,11 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://muhammadshahidusman.github.io/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://muhammadshahidusman.github.io/assets/img/og-card.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/karakal-tree-count.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/karakal-canopy-height.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/kalash-valley-land-cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/mansehra-land-cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/malakand-flood-risk.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/hazara-stream-order.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/hazara-hydrological-risk.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/hazara-soil-erosion.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/skardu-water-supply.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/astore-water-supply.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/salamiyah-uhi.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/islamabad-lst-2023.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/islamabad-lst-2013.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/bahawalpur-no2-2024.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/bahawalpur-aai-2024.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/rashoon-landslides.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/california-wildfire-hotspots.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/california-wildfire-safe-zones.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadshahidusman.github.io/assets/maps/ireland-seabird-habitat.webp</image:loc>
     </image:image>
   </url>
 </urlset>

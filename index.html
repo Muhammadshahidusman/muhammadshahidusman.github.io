@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Shahid Usman | GeoAI &amp; GIS Developer, Lahore</title>
+  <title>Shahid Usman | GeoAI &amp; GIS Developer, Lahore</title>
   <meta name="description" content="GeoAI engineer, remote sensing &amp; GIS developer and data scientist in Lahore: deep learning on satellite imagery, Earth Engine, PostGIS. Open to roles.">
   <meta name="author" content="Muhammad Shahid Usman">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="google-site-verification" content="B8L-ftocAJqtid1BVoplPyD_L55EFyCCHYXDsxm8spM" />
   <link rel="canonical" href="https://muhammadshahidusman.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="Muhammad Shahid Usman | GeoAI &amp; GIS Developer, Lahore">
+  <meta property="og:title" content="Shahid Usman | GeoAI &amp; GIS Developer, Lahore">
   <meta property="og:description" content="GeoAI, remote sensing, GIS development and geospatial data science. Projects with code, metrics and live demos.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://muhammadshahidusman.github.io/">
@@ -24,6 +24,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Muhammad Shahid Usman",
+    "alternateName": ["Shahid Usman"],
     "jobTitle": "GeoAI Engineer, Remote Sensing & GIS Developer, Data Scientist",
     "url": "https://muhammadshahidusman.github.io/",
     "image": "https://muhammadshahidusman.github.io/assets/img/portrait-cutout.webp",
@@ -35,14 +36,21 @@
       { "@type": "CollegeOrUniversity", "name": "Riphah International University" }
     ],
     "knowsAbout": ["GeoAI", "Remote sensing", "GIS development", "GIS analysis", "Data science", "Machine learning", "Deep learning", "Google Earth Engine", "Sentinel-1 SAR", "PostGIS", "PyTorch"],
-    "sameAs": ["https://www.linkedin.com/in/shahidusmaninfo/", "https://github.com/Muhammadshahidusman"]
+    "sameAs": [
+      "https://www.linkedin.com/in/shahidusmaninfo/",
+      "https://github.com/Muhammadshahidusman",
+      "https://huggingface.co/Muhammadshahidusman",
+      "https://scholar.google.com/citations?user=73pGPBgAAAAJ",
+      "https://orcid.org/0009-0006-9257-9874",
+      "https://www.kaggle.com/muhammadshahidusman"
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/portrait-cutout.webp">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -57,6 +65,7 @@
       <nav id="navMenu" aria-label="Main">
         <a href="#expertise">Expertise</a>
         <a href="#work">Projects</a>
+        <a href="#maps">Maps</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a class="nav-cta" href="#contact">Hire me</a>
@@ -349,6 +358,195 @@
       </div>
     </section>
 
+    <!-- MAP GALLERY: compressed WebP versions of client and independent maps -->
+    <section id="maps" class="section section-maps">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Map gallery</p>
+          <h2>Maps for clients, governments and research</h2>
+          <p>19 maps from 13 projects, from village tree counts in Chitral to division-wide flood risk models. Click any map to open it larger.</p>
+        </div>
+        <div class="map-filters" role="group" aria-label="Filter maps">
+          <button class="chip is-on" data-mapfilter="all" aria-pressed="true">All</button>
+          <button class="chip" data-mapfilter="client" aria-pressed="false">Client work</button>
+          <button class="chip" data-mapfilter="own" aria-pressed="false">Independent</button>
+        </div>
+        <div class="map-grid">
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/karakal-tree-count.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1132, &quot;alt&quot;: &quot;Forest canopy and tree count map of Karakal village along the Bumborate River, with vegetation cover classes and tree symbols&quot;, &quot;cap&quot;: &quot;Forest canopy and tree count, Karakal: 986 trees&quot;}, {&quot;src&quot;: &quot;assets/maps/karakal-canopy-height.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1132, &quot;alt&quot;: &quot;Canopy height map of Karakal village in four height classes, with an area table and bar chart&quot;, &quot;cap&quot;: &quot;Vertical structure of the forest canopy, Karakal&quot;}]" aria-label="Open Kalash Valley: Forest Canopy &amp; Tree Count maps">
+              <img src="assets/maps/karakal-tree-count-thumb.webp" width="720" height="509" loading="lazy" decoding="async" alt="Forest canopy and tree count map of Karakal village along the Bumborate River, with vegetation cover classes and tree symbols">
+              <span class="map-count">2 maps</span>
+            </button>
+            <div class="map-body">
+              <p class="map-client">Aga Khan Agency for Habitat</p>
+              <h3>Kalash Valley: Forest Canopy &amp; Tree Count</h3>
+              <p>Part of a rural spatial assessment and habitat plan for 10 villages in Kalash Valley, Chitral. Tree crowns were counted from Meta's Global Canopy Height Model over Landsat 8 vegetation cover: 986 trees in Karakal village, with canopy heights split into four classes.</p>
+              <ul class="tags"><li>Meta Canopy Height</li><li>Landsat 8</li><li>ArcGIS Pro</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/kalash-valley-land-cover.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1123, &quot;alt&quot;: &quot;Land cover classification of Kalash Valley in 2024 in six classes, with an area table in square kilometres&quot;, &quot;cap&quot;: &quot;Land cover classification, Kalash Valley, 2024&quot;}]" aria-label="Open Kalash Valley Land Cover, 2024 map">
+              <img src="assets/maps/kalash-valley-land-cover-thumb.webp" width="720" height="505" loading="lazy" decoding="async" alt="Land cover classification of Kalash Valley in 2024 in six classes, with an area table in square kilometres">
+              
+            </button>
+            <div class="map-body">
+              <p class="map-client">Aga Khan Agency for Habitat</p>
+              <h3>Kalash Valley Land Cover, 2024</h3>
+              <p>Six-class land cover across the Rumboor, Bumborate and Birir valleys: 278 km² of glaciers and water, 159 km² of moderate vegetation and 74 km² of very dense forest, with village boundaries overlaid.</p>
+              <ul class="tags"><li>Land cover</li><li>Area statistics</li><li>ArcGIS Pro</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/mansehra-land-cover.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1130, &quot;alt&quot;: &quot;Five land cover maps of Mansehra for 2003, 2008, 2013, 2018 and 2023, showing built-up area in red spreading across vegetation&quot;, &quot;cap&quot;: &quot;Land cover analysis, Mansehra, 2003–2023&quot;}]" aria-label="Open Mansehra Land Cover Change, 2003–2023 map">
+              <img src="assets/maps/mansehra-land-cover-thumb.webp" width="720" height="509" loading="lazy" decoding="async" alt="Five land cover maps of Mansehra for 2003, 2008, 2013, 2018 and 2023, showing built-up area in red spreading across vegetation">
+              
+            </button>
+            <div class="map-body">
+              <p class="map-client">KP Cities Improvement Project · ADB</p>
+              <h3>Mansehra Land Cover Change, 2003–2023</h3>
+              <p>Five epochs of land cover across 8,480 acres of Mansehra for the Hazara regional development plan. Built-up land grew 4.3× (360 to 1,540 acres) while vegetation fell from 5,781 to 4,047 acres.</p>
+              <ul class="tags"><li>Landsat</li><li>Change detection</li><li>Land cover</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/malakand-flood-risk.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1123, &quot;alt&quot;: &quot;Flood susceptibility map of Malakand Division in five classes, with a pie chart of factor weights and an area table&quot;, &quot;cap&quot;: &quot;Flood risk assessment using GIS-based MCDA, Malakand Division&quot;}]" aria-label="Open Flood Risk Assessment: Malakand Division map">
+              <img src="assets/maps/malakand-flood-risk-thumb.webp" width="720" height="505" loading="lazy" decoding="async" alt="Flood susceptibility map of Malakand Division in five classes, with a pie chart of factor weights and an area table">
+              
+            </button>
+            <div class="map-body">
+              <p class="map-client">Hazara &amp; Malakand master plans · ADB</p>
+              <h3>Flood Risk Assessment: Malakand Division</h3>
+              <p>A weighted overlay of eight factors (rainfall 25%, slope 20%, distance to water 15%, drainage density and elevation 10% each, curvature 8%, NDVI 7%, aspect 5%) across about 30,500 km². 3,787 km² falls in the high-risk class.</p>
+              <ul class="tags"><li>MCDA</li><li>Weighted overlay</li><li>ArcGIS Pro</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/hazara-stream-order.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1124, &quot;alt&quot;: &quot;Stream order map of the Hazara region with streams coloured by Strahler order 1 to 4 and a stream length table&quot;, &quot;cap&quot;: &quot;Stream order mapping and watershed flow structure, Hazara&quot;}, {&quot;src&quot;: &quot;assets/maps/hazara-hydrological-risk.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1124, &quot;alt&quot;: &quot;Hydrological risk map in three classes, with a high-risk zone in red along the river corridor&quot;, &quot;cap&quot;: &quot;Hydrological risk across watershed basins&quot;}]" aria-label="Open Watershed Hydrology &amp; Hydrological Risk maps">
+              <img src="assets/maps/hazara-stream-order-thumb.webp" width="720" height="506" loading="lazy" decoding="async" alt="Stream order map of the Hazara region with streams coloured by Strahler order 1 to 4 and a stream length table">
+              <span class="map-count">2 maps</span>
+            </button>
+            <div class="map-body">
+              <p class="map-client">Hazara &amp; Malakand master plans · ADB</p>
+              <h3>Watershed Hydrology &amp; Hydrological Risk</h3>
+              <p>Basins and Strahler stream orders 1 to 4 delineated from elevation data across Hazara, plus a three-class hydrological risk surface that puts the high-risk zone along the river corridor from Khwazakhela to Chakdara.</p>
+              <ul class="tags"><li>DEM</li><li>Stream order</li><li>Hydrology</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/hazara-soil-erosion.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1124, &quot;alt&quot;: &quot;Soil erosion map of the Hazara region in five soil loss classes, with pie charts and an area table&quot;, &quot;cap&quot;: &quot;Soil erosion estimation using the USLE model, Hazara&quot;}]" aria-label="Open Soil Erosion Estimation: USLE Model map">
+              <img src="assets/maps/hazara-soil-erosion-thumb.webp" width="720" height="506" loading="lazy" decoding="async" alt="Soil erosion map of the Hazara region in five soil loss classes, with pie charts and an area table">
+              
+            </button>
+            <div class="map-body">
+              <p class="map-client">Hazara &amp; Malakand master plans · ADB</p>
+              <h3>Soil Erosion Estimation: USLE Model</h3>
+              <p>Annual soil loss for the Hazara region from the Universal Soil Loss Equation. Of about 1.71 million acres, 1.62 million are very low risk and 4,370 acres face extreme soil loss.</p>
+              <ul class="tags"><li>USLE</li><li>Rainfall erosivity</li><li>Raster algebra</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/skardu-water-supply.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1132, &quot;alt&quot;: &quot;Map of 62 water supply schemes in District Skardu on an elevation surface, with a table of scheme details&quot;, &quot;cap&quot;: &quot;Water supply schemes, District Skardu&quot;}, {&quot;src&quot;: &quot;assets/maps/astore-water-supply.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1141, &quot;alt&quot;: &quot;Map of 17 water supply schemes in District Astore on an elevation surface, with a table of scheme details&quot;, &quot;cap&quot;: &quot;Water supply schemes, District Astore&quot;}]" aria-label="Open Water Supply Schemes: Skardu &amp; Astore maps">
+              <img src="assets/maps/skardu-water-supply-thumb.webp" width="720" height="509" loading="lazy" decoding="async" alt="Map of 62 water supply schemes in District Skardu on an elevation surface, with a table of scheme details">
+              <span class="map-count">2 maps</span>
+            </button>
+            <div class="map-body">
+              <p class="map-client">Provincial Water Policy, Gilgit-Baltistan · IFAD</p>
+              <h3>Water Supply Schemes: Skardu &amp; Astore</h3>
+              <p>Every water supply scheme in Skardu (62) and Astore (17) mapped on elevation and the river network, with demand, population served, pipe length and capital cost for each scheme.</p>
+              <ul class="tags"><li>Infrastructure mapping</li><li>DEM</li><li>Cartography</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="client">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/salamiyah-uhi.webp&quot;, &quot;w&quot;: 1600, &quot;h&quot;: 1133, &quot;alt&quot;: &quot;Urban heat island map of Salamiyah, Syria, from low in purple to high in yellow, hottest in the city core&quot;, &quot;cap&quot;: &quot;Urban heat island map, Salamiyah, 2023&quot;}]" aria-label="Open Urban Heat Island: Salamiyah, Syria map">
+              <img src="assets/maps/salamiyah-uhi-thumb.webp" width="720" height="510" loading="lazy" decoding="async" alt="Urban heat island map of Salamiyah, Syria, from low in purple to high in yellow, hottest in the city core">
+              
+            </button>
+            <div class="map-body">
+              <p class="map-client">Aga Khan Agency for Habitat · Syria</p>
+              <h3>Urban Heat Island: Salamiyah, Syria</h3>
+              <p>Urban heat island surface for the Resilience Plan for Salamiyah City, from Landsat 8 thermal data for April to August 2023, with neighbourhoods and roads overlaid.</p>
+              <ul class="tags"><li>Landsat 8</li><li>Thermal</li><li>UHI</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="own">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/islamabad-lst-2023.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 1698, &quot;alt&quot;: &quot;Land surface temperature map of Islamabad in 2023 in six classes from 30°C to over 50°C&quot;, &quot;cap&quot;: &quot;Islamabad land surface temperature, 2023&quot;}, {&quot;src&quot;: &quot;assets/maps/islamabad-lst-2013.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 1698, &quot;alt&quot;: &quot;Land surface temperature map of Islamabad in 2013 in six classes from 30°C to over 50°C&quot;, &quot;cap&quot;: &quot;Islamabad land surface temperature, 2013&quot;}]" aria-label="Open Islamabad Land Surface Temperature, 2013–2023 maps">
+              <img src="assets/maps/islamabad-lst-2023-thumb.webp" width="720" height="509" loading="lazy" decoding="async" alt="Land surface temperature map of Islamabad in 2023 in six classes from 30°C to over 50°C">
+              <span class="map-count">2 maps</span>
+            </button>
+            <div class="map-body">
+              <p class="map-client own">Independent project</p>
+              <h3>Islamabad Land Surface Temperature, 2013–2023</h3>
+              <p>Land surface temperature for Islamabad from Landsat in six classes, from 30°C or less to over 50°C, on one fixed scale so 2013 and 2023 compare directly.</p>
+              <ul class="tags"><li>Landsat</li><li>LST</li><li>Time series</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="own">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/bahawalpur-no2-2024.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 1699, &quot;alt&quot;: &quot;Nitrogen dioxide concentration over Bahawalpur in 2024 on a gridded surface with roads and the river&quot;, &quot;cap&quot;: &quot;Nitrogen dioxide (NO₂), Bahawalpur, 2024&quot;}, {&quot;src&quot;: &quot;assets/maps/bahawalpur-aai-2024.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 1699, &quot;alt&quot;: &quot;Absorbing aerosol index over Bahawalpur in 2024, highest in red over the city centre&quot;, &quot;cap&quot;: &quot;Absorbing aerosol index, Bahawalpur, 2024&quot;}]" aria-label="Open Air Quality: Bahawalpur, 2020–2024 maps">
+              <img src="assets/maps/bahawalpur-no2-2024-thumb.webp" width="720" height="510" loading="lazy" decoding="async" alt="Nitrogen dioxide concentration over Bahawalpur in 2024 on a gridded surface with roads and the river">
+              <span class="map-count">2 maps</span>
+            </button>
+            <div class="map-body">
+              <p class="map-client own">Independent project</p>
+              <h3>Air Quality: Bahawalpur, 2020–2024</h3>
+              <p>Five pollutants mapped for Bahawalpur in 2020, 2022 and 2024 (NO₂, SO₂, CO, formaldehyde and the aerosol index) from Sentinel-5P. Aerosols and CO peak over the city centre.</p>
+              <ul class="tags"><li>Sentinel-5P</li><li>Air quality</li><li>Time series</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="own">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/rashoon-landslides.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 1698, &quot;alt&quot;: &quot;Landslide inventory map with landslide points in red along fault lines, plus small slope, landslide density and elevation maps&quot;, &quot;cap&quot;: &quot;Landslide inventory and distribution along the Rashoon fault line&quot;}]" aria-label="Open Landslide Inventory: Rashoon Fault Line map">
+              <img src="assets/maps/rashoon-landslides-thumb.webp" width="720" height="509" loading="lazy" decoding="async" alt="Landslide inventory map with landslide points in red along fault lines, plus small slope, landslide density and elevation maps">
+              
+            </button>
+            <div class="map-body">
+              <p class="map-client own">Independent project</p>
+              <h3>Landslide Inventory: Rashoon Fault Line</h3>
+              <p>Hundreds of mapped landslides along the Rashoon fault line in Chitral, with slope, elevation and landslide density panels showing where slides cluster.</p>
+              <ul class="tags"><li>Landslide inventory</li><li>Kernel density</li><li>DEM</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="own">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/california-wildfire-hotspots.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 3392, &quot;alt&quot;: &quot;California wildfire hotspot map for 7 to 13 January 2025, hottest in red in the north&quot;, &quot;cap&quot;: &quot;Wildfire hotspot analysis, California, 7–13 January 2025&quot;}, {&quot;src&quot;: &quot;assets/maps/california-wildfire-safe-zones.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 3392, &quot;alt&quot;: &quot;California refuge map in four zones: critical risk, high alert, moderate safety and secure&quot;, &quot;cap&quot;: &quot;Wildfire refuge map: California&#x27;s zones of safety&quot;}]" aria-label="Open California Wildfires, January 2025 maps">
+              <img src="assets/maps/california-wildfire-hotspots-thumb.webp" width="720" height="1018" loading="lazy" decoding="async" alt="California wildfire hotspot map for 7 to 13 January 2025, hottest in red in the north">
+              <span class="map-count">2 maps</span>
+            </button>
+            <div class="map-body">
+              <p class="map-client own">Independent project</p>
+              <h3>California Wildfires, January 2025</h3>
+              <p>Hotspot analysis of NASA FIRMS fire detections for 7 to 13 January 2025, during the Los Angeles fires, turned into a four-zone refuge map from critical risk to secure.</p>
+              <ul class="tags"><li>NASA FIRMS</li><li>Hotspot analysis</li><li>Buffers</li></ul>
+            </div>
+          </article>
+          <article class="map-card reveal" data-group="own">
+            <button class="map-thumb" type="button" data-maps="[{&quot;src&quot;: &quot;assets/maps/ireland-seabird-habitat.webp&quot;, &quot;w&quot;: 2400, &quot;h&quot;: 1848, &quot;alt&quot;: &quot;Habitat suitability map of Ireland in five classes, most suitable along the west coast&quot;, &quot;cap&quot;: &quot;Seabird breeding habitat suitability, Ireland&quot;}]" aria-label="Open Seabird Breeding Habitat Suitability, Ireland map">
+              <img src="assets/maps/ireland-seabird-habitat-thumb.webp" width="720" height="554" loading="lazy" decoding="async" alt="Habitat suitability map of Ireland in five classes, most suitable along the west coast">
+              
+            </button>
+            <div class="map-body">
+              <p class="map-client own">Independent project</p>
+              <h3>Seabird Breeding Habitat Suitability, Ireland</h3>
+              <p>A multi-criteria suitability model weighting distance to coast, seabird colonies, food availability, elevation, slope, NDVI, roads, tourist sites and population density into five classes.</p>
+              <ul class="tags"><li>MCDA</li><li>Suitability</li><li>ArcGIS Pro</li></ul>
+            </div>
+          </article>
+        </div>
+        <p class="note map-note">Client maps are shown at reduced resolution and remain the property of the clients named.</p>
+      </div>
+    </section>
+
+    <dialog class="viewer" id="mapViewer" aria-label="Map viewer">
+      <div class="viewer-bar">
+        <span class="viewer-count" id="mvCount"></span>
+        <a class="viewer-open" id="mvOpen" href="#" target="_blank" rel="noopener">Open full size ↗</a>
+        <button class="viewer-close" id="mvClose" type="button" aria-label="Close">×</button>
+      </div>
+      <figure class="viewer-fig">
+        <img id="mvImg" src="data:," alt="">
+        <figcaption id="mvCap"></figcaption>
+      </figure>
+      <button class="viewer-nav viewer-prev" id="mvPrev" type="button" aria-label="Previous map">‹</button>
+      <button class="viewer-nav viewer-next" id="mvNext" type="button" aria-label="Next map">›</button>
+    </dialog>
+
     <!-- EXPERIENCE & EDUCATION -->
     <section id="experience" class="section section-alt">
       <div class="wrap">
@@ -416,7 +614,7 @@
         <!-- client and government projects -->
         <div class="clients-head" id="clients">
           <h3>Client &amp; government projects</h3>
-          <p>Spatial decision support, master planning and hazard mapping for development agencies and provincial governments.</p>
+          <p>Spatial decision support, master planning and hazard mapping for development agencies and provincial governments. <a href="#maps">See the maps from this work ↑</a></p>
         </div>
         <div class="work-grid">
           <article class="work reveal"><p class="client">PICIIP · Asian Development Bank</p><h3>Spatial Decision Support System</h3><p>SDSS for Sahiwal and Sialkot that integrates multi-source data and analytics for infrastructure planning and service delivery.</p></article>
@@ -489,6 +687,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
