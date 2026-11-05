@@ -112,7 +112,7 @@
         <dl class="glance-grid">
           <div><dt>Current role</dt><dd>GIS Analyst, Invobyte<span>Since May 2026</span></dd></div>
           <div><dt>Experience</dt><dd><strong>2+ yrs</strong><span>GIS &amp; remote sensing</span></dd></div>
-          <div><dt>Portfolio</dt><dd><strong>8</strong><span>Public projects with code</span></dd></div>
+          <div><dt>Portfolio</dt><dd><strong>9</strong><span>Public projects with code</span></dd></div>
           <div><dt>Web GIS</dt><dd><strong>20+</strong><span>Interactive maps deployed</span></dd></div>
           <div><dt>Education</dt><dd>BS Remote Sensing &amp; GIS, 2024<span>MS Data Science, expected 2027</span></dd></div>
           <div><dt>Core stack</dt><dd>Python, PyTorch, Earth Engine, PostGIS, ArcGIS Pro</dd></div>
@@ -204,6 +204,34 @@
               <ul class="tags"><li>Earth Engine</li><li>Sentinel-1 SAR</li><li>Sentinel-2</li><li>Open Buildings</li><li>FastAPI</li><li>PostGIS</li><li>React</li><li>MapLibre</li></ul>
               <div class="links">
                 <a class="btn btn-primary btn-sm" href="https://github.com/Muhammadshahidusman/kinara" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj proj-lead reveal" id="p-plumescout">
+            <a class="proj-media" href="https://huggingface.co/spaces/Muhammadshahidusman/plumescout" target="_blank" rel="noopener">
+              <img src="assets/img/plumescout-kuwait-grid.webp" width="1138" height="1138" loading="lazy" alt="Four 2 km Sentinel-2 views of an oil field in Kuwait on 23 February 2026: true colour, the B12/B11 methane signal with a blue patch of methane absorption, the U-Net probability with one detected region, and the same detection outlined in cyan next to a Carbon Mapper reference plume marked with a yellow cross">
+              <div class="map-legend" aria-hidden="true">
+                <strong>Sentinel-2 L1C, 10 m</strong>
+                <span><i style="background:#2166ac"></i>methane absorption</span>
+                <span><i style="background:#4dd0e1"></i>U-Net detection</span>
+                <span><i style="background:#ffeb3b"></i>Carbon Mapper plume</span>
+              </div>
+            </a>
+            <div class="proj-body">
+              <ul class="role-tags" aria-label="Roles"><li>GeoAI</li><li>Deep learning</li><li>Remote sensing</li></ul>
+              <h3>PlumeScout: Methane Plumes over Gulf Oil Fields</h3>
+              <p>A U-Net reads free Sentinel-2 imagery over 19 oil and gas sites in Kuwait, southern Iraq and Oman and flags methane plume candidates. Every detection is checked against NASA EMIT and Carbon Mapper observations. Splits are by site, the Gulf is test-only, and sites within 2 km of a training location are excluded.</p>
+              <ul class="metrics">
+                <li><strong>0.88</strong><span>scene recall on the CH4Net benchmark (paper: 0.84)</span></li>
+                <li><strong>0.22</strong><span>plume recall on 16 unseen Gulf sites</span></li>
+                <li><strong>0.27</strong><span>band-ratio baseline on the same sites</span></li>
+              </ul>
+              <p class="note">The headline is a negative result: moved from Turkmenistan to the Gulf, the U-Net doesn't beat the classic band-ratio method, and 12 of its 13 detected plumes are at one Kuwait site. Gulf recall 95% CI [0.00, 0.41] over 59 reference plumes. Detections are coordinates and dates; no emission rates are estimated. Contains modified Copernicus Sentinel-2 data; reference plumes from NASA EMIT and Carbon Mapper.</p>
+              <ul class="tags"><li>PyTorch</li><li>U-Net</li><li>Sentinel-2</li><li>NASA EMIT</li><li>Earth Engine</li><li>Gradio</li></ul>
+              <div class="links">
+                <a class="btn btn-primary btn-sm" href="https://huggingface.co/spaces/Muhammadshahidusman/plumescout" target="_blank" rel="noopener">Live demo ↗</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Muhammadshahidusman/plumescout" target="_blank" rel="noopener">Code</a>
               </div>
             </div>
           </article>
