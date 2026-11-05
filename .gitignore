@@ -1,3 +1,7 @@
 # Raw map exports (2.5 GB, several files over GitHub's 100 MB limit).
 # The web versions the site uses live in assets/maps/.
 Propolio/
+
+# Unused files parked by move-unused-files.bat (local only, never published)
+_deleted/
+move-unused-files.bat
